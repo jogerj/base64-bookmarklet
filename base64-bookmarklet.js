@@ -35,6 +35,10 @@ function hash( choice, text ) {
 
 try {
 	var text = getSelectionText();
+	if (!text) {
+		// prompt for text if empty
+		text = window.prompt("Enter the text you would like to convert:");
+	}
 	var choice = window.confirm("Press OK to encode to base64.\nPress CANCEL to decode from base64");
     do {
 		text = hash(choice, text);

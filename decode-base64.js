@@ -21,7 +21,11 @@ function decode( str ) {
 
 try {
 	var text = getSelectionText();
-  do {
+	if (!text) {
+		// prompt for text if empty
+		text = window.prompt("Enter the text you would like to convert:");
+	}
+    do {
 		text = decode(text);
 	} while(window.prompt("Press CTRL-C to copy\nPress ESC/Click CANCEL to close\nPress ENTER/Click OK to decode again", text));
 } catch(e) {
