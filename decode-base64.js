@@ -29,6 +29,6 @@ try {
 		text = decode(text);
 	} while(window.prompt("Press CTRL-C to copy\nPress ESC/Click CANCEL to close\nPress ENTER/Click OK to decode again", text));
 } catch(e) {
-	window.alert('Failed to decode! Not a valid Base64!');
 	console.log(e);
+	window.alert('Failed to decode! Not a valid Base64!');
 }
