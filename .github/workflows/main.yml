@@ -29,3 +29,8 @@ jobs:
       # You may pin to the exact commit or the version.
       # uses: nizarmah/auto-minify@f8323743bad5df5496e89eb086cb8aeb5e523866
         uses: nizarmah/auto-minify@v2.0
+      - name: Auto committing minified files
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Github Action: Auto Minified JS and CSS files"
+          branch: ${{ github.ref }}
