@@ -1,4 +1,3 @@
-javascript:(
 function getSelectionText() {
     var text = "";
     var activeEl = document.activeElement;
@@ -46,4 +45,4 @@ try {
 	} else {
 		window.alert(e)
 	}
-})
+}
